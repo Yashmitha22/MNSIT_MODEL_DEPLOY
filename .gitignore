@@ -1,0 +1,9 @@
+# Ignore everything by default
+*
+
+# But keep these specific files
+!app.py
+!handwritten_digit.keras
+
+# Keep .gitignore itself
+!.gitignore
