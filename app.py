@@ -1,4 +1,4 @@
-from Flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template
 from tensorflow.keras.models import load_model
 import numpy as np
 import re
@@ -8,3 +8,7 @@ from PIL import Image
 
 app = Flask(__name__)
 model = load_model('handwritten_digit.keras')
+
+@app.route('/')
+def home():
+    return render_template('index.html')
